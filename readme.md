@@ -72,4 +72,21 @@
     - Java SE, Java EE, Java ME, Java Card, Java TV등이 있음
     - 실행 환경에 따라 API 구성이 달라짐
     - 일반적인 목적의 플랫폼은 Java SE(Standard Edition)
-    - 
+    - 대규모 개발을 위한 __기업수준의 요구사항__을 포함한 플랫폼은 Java EE(Enterprise Edition)
+    - Java EE는 GlassFish라고 하는 참조구현만 제공되고 실제 제품은 오라클, IBM, JBOSS등 관련 기업에서 의해 구현되고 배포/ 판매
+    - 스프링의 성장으로 EE는 시장에서 축소되고 오라클은 EE를 이클립스 재단으로 이관
+
+### JDK(Java Development Kit)
+- 자바를 개발하기 위한 __개발킷__, 컴파일러와 디버거 등이 포함됨
+- 단순히 자바 프로그램을 실행하기 위해서는 JRE(Java Runtime Environment)만으로도 가능
+- Eclipse, IntelliJ등 통합개발환경을 사용해도 JDK는 필요
+
+## 자바 활용 분야
+- 주로 웹서비스의 백엔드 개발에 사용
+- 서블릿, JSP, 스프링등이 대표적
+- GUI프로그램 개발이 아닌 서버측 프로그램에 많이 이용
+    - 네이버와 같은 포탈, 뱅킹, 쇼핑몰, SNS등에 백엔드 서비스 개발
+    - 스프링의 도움으로 성능, 안정성, 보안등이 충족되는 기업 시스템 개발
+    - 안드로이드에서 Kotlin, Go lang등에 사용
+    - 빅데이터, 머신러닝등 인공지능 기반 기술등에 사용
+
