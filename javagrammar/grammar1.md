@@ -109,4 +109,82 @@ public class HelloWorld {
 	- double : 8bite / 실수형의 기본 자료형
 	- boolean: 1byte / 논리형으로 참, 거짓을 표현
 
-- 
+- 자바에서는 유니코드를 기본으로 지원하기 때문에 문자 처리에 2바이트 필요
+- 문자 출력은 유니코드번호에 등록된 문자가 출력되므로 실제 촘ㄱ에 저장되는 값은 유니코드 번호로 숫자값임
+- JVM에서 피연산자를 4바이트 단위로 처리하기 때문에 int보다 작은 자료형의 값을 연산하는 경우 자동으로 int로 변환되어 처리
+- float형을 지정하기 위해서는 실수값 뒤에 F/f를 붙여야함
+- long형으로 처리하기 위해서는 뒤에 L/l을 붙여야 함
+= 문자열은 원시자료형이 안니 클래스 타입
+
+```
+int num1; // 
+정수형 변수 char c1 = 'A'; // 문자형 변수를 선언하고 `A`로 초기화.
+long num2 = 212355L; // long 정수형 변수를 선언. 
+float num3 = 13.4F; // float 실수형 변수를 선언. 
+boolean result = true; // 논리형 변수를 선언하고 true 로 초기화.
+```
+
+### 자바 변수 유형
+프로그램 코드내에서 변수의 위치에 따라 몇가지 유형으로 변수를 구분
+- **멤버변수(Member variable)**
+	- 클래스부에 선언된 변수들로 객체의 속성에 해당
+	- 인스턴스 변수와 클래스 변수로 구분
+- **인스턴스변수(Instance variable)**
+	- 클래스가 인스턴스될 때 초기화되는 변수
+	- 인스턴스를 통해서만 접근 가능
+- **매개변수(parameter)**
+	- 메서드에 인자로 전달되는 값을 받기 위한 변수
+	- 메서드 내에서는 지역변수처럼 사용
+- **지역변수(Local variable)**
+	- 메서드 내에서 선언된 변수
+	- 멤버변수와 동일한 이름을 가질수 있으며 지역변수가 우선
+- **클래스변수(Class variable)**
+	- static으로 선언된 변수
+	- 인스턴스 생성없이 **클래스이름, 변수명**으로 사용 가능
+	- main()메서드에서 참조 가능
+
+**변수 기본 예제**
+```
+Public class Variables {
+	//멤버 변수, 인스턴스 변수
+	int num1;
+
+	// 멤버 변수, 클래스 변수
+	static int num2;
+
+	// 매개변수
+	public void printName(String name) {
+		//지역변수
+		String prtMsg = name + "Hello";
+		System.out.println(prtMsg);
+	}
+	
+	public static void main(String[] args) {
+		//인스턴스 생성
+		Variables mc = new Variables();
+		//인스턴스 변수 사용
+		mc.num1 = 100;
+		//클래스 변수 사용
+		Variables.num2 = 50;	// num2=50으로 사용해도 됨.
+
+		//인자로 매개변수에 값을 전달
+		mc.printName("홍길동");
+
+		System.out.printf("%d,%d",mc.num1, Variables.num2);
+	}
+}
+
+```
+
+- main()에서 Variables 의 인스턴스를 생성하고 참조변수인 mc에 대입. 즉, mc 변수의 타입은 Variables가 됨
+- mc.num1 과 같이 인스턴스 변수와 메서드를 사용 가능
+- main에서 num1이나 msg변수 printName(), getMessage() 메서드를 직접 호출하는 것은 안됨
+- main에서 static변수(클래스변수)인 num2는 가능
+**실행결과**
+```
+홍길동 Hello
+100, 50
+```
+
+> ## Method
+
