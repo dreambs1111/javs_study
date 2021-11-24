@@ -117,8 +117,8 @@ public class HelloWorld {
 = 문자열은 원시자료형이 안니 클래스 타입
 
 ```
-int num1; // 
-정수형 변수 char c1 = 'A'; // 문자형 변수를 선언하고 `A`로 초기화.
+int num1; // 정수형 변수 
+char c1 = 'A'; // 문자형 변수를 선언하고 `A`로 초기화.
 long num2 = 212355L; // long 정수형 변수를 선언. 
 float num3 = 13.4F; // float 실수형 변수를 선언. 
 boolean result = true; // 논리형 변수를 선언하고 true 로 초기화.
