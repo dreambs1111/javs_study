@@ -1,4 +1,4 @@
-> # Java program grammar
+> # Java program grammar 1
 - java는 기본적으로 클래스 구조에서 시작
 - 클래스는 객체지향 개념에서 객체를 정의하는 틀로 많은 객체지향 언어의 기본 구조
 
