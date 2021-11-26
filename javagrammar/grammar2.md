@@ -237,51 +237,32 @@ ArrayList car_list = Arrays.asList(cars);
 ```
 
 ##### toString()
-- 
+- 모든 자바 Object에 포함된 메서드로 기본은 Object ID를 출력
+- 배열 자체를 System.out.pringln()등에서 출력하면 데이터가 출력되지 않고 Object ID가 출력됨
+- Arrays.to.Strinf()을 이용하면 데이터를 출력할 수 있음
+```
+System.out.println(cars);    //Object ID가 출력됨
+System.out.println(Arrays.toString(cars));    // ["hyundai","bmw","benz","toyota"]
+```
 
+##### sort()
+- 배열원소를 정렬한다. 원본 배열 자체가 원소들이 정렬된 순서로 변경됨
+- sort(array, Comparator), sort(array, int fromindex, int toindex)​를 이용해 내림차순 정렬 및 구간 정렬 등이 가능하다.
+- 구간 정렬의 경우 __fromindex ~ toindex-1__ 까지를 범위로 함.
+```
+Arrays.sort(cars);    //[benz,bmw,hyundai, toyota]
+Arrays.sort(cars, Collections.reveerseOrder());    //[benz,bmw,hyundai, toyota]
+Arrays.sort(cars, 0,2); // [hyundai, toyota, bmw, benz]
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##### copyOf()
+- 배열을 복사해서 새로운 배열로 반환
+- copyOfRage() 는 특정 범위만 반환
+- 구간 복사의 경우 __fromindex ~ toindex-1__ 까지를 범위로 함
+```
+String[] cars_copied = Arrays.copyOf(cars); //[hyundai, toyota, bmw, benz] 
+String[] cars_copied = Arrays.copyOfRange(cars, 0,2); // [hyundai, toyota]
+```
 
 
 

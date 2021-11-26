@@ -1,0 +1,320 @@
+[W 05:38:22.737 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 05:38:22.741 NotebookApp] Serving notebooks from local directory: /home/ubuntu
+[I 05:38:22.741 NotebookApp] The Jupyter Notebook is running at:
+[I 05:38:22.741 NotebookApp] http://myserver:8888/
+[I 05:38:22.741 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 05:38:38.115 NotebookApp] Saving file at /java_study/javagrammar/grammar2.md
+[E 05:39:11.099 NotebookApp] Failed to run command:
+    ['java', '-jar', '/home/ubuntu/.local/share/jupyter/kernels/java/ijava-1.3.0.jar', '/home/ubuntu/.local/share/jupyter/runtime/kernel-a198eeae-bcb0-4f57-9579-4179d4a23158.json']
+        PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+        with kwargs:
+    {'stdin': -1, 'stdout': None, 'stderr': None, 'cwd': '/home/ubuntu/java_study/javagrammar', 'start_new_session': True}
+    
+[E 05:39:11.099 NotebookApp] Uncaught exception POST /api/sessions (175.196.232.2)
+    HTTPServerRequest(protocol='http', host='code.jonghyuck.com:8888', method='POST', uri='/api/sessions', version='HTTP/1.1', remote_ip='175.196.232.2')
+    Traceback (most recent call last):
+      File "/usr/lib/python3/dist-packages/tornado/web.py", line 1592, in _execute
+        result = yield result
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/handlers.py", line 69, in post
+        model = yield maybe_future(
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/sessionmanager.py", line 88, in create_session
+        kernel_id = yield self.start_kernel_for_session(session_id, path, name, type, kernel_name)
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/sessionmanager.py", line 100, in start_kernel_for_session
+        kernel_id = yield maybe_future(
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 326, in wrapper
+        yielded = next(result)
+      File "/usr/lib/python3/dist-packages/notebook/services/kernels/kernelmanager.py", line 168, in start_kernel
+        super(MappingKernelManager, self).start_kernel(**kwargs)
+      File "/usr/lib/python3/dist-packages/jupyter_client/multikernelmanager.py", line 158, in start_kernel
+        km.start_kernel(**kwargs)
+      File "/usr/lib/python3/dist-packages/jupyter_client/manager.py", line 305, in start_kernel
+        self.kernel = self._launch_kernel(kernel_cmd, **kw)
+      File "/usr/lib/python3/dist-packages/jupyter_client/manager.py", line 212, in _launch_kernel
+        return launch_kernel(kernel_cmd, **kw)
+      File "/usr/lib/python3/dist-packages/jupyter_client/launcher.py", line 135, in launch_kernel
+        proc = Popen(cmd, **kwargs)
+      File "/usr/lib/python3.8/subprocess.py", line 858, in __init__
+        self._execute_child(args, executable, preexec_fn, close_fds,
+      File "/usr/lib/python3.8/subprocess.py", line 1704, in _execute_child
+        raise child_exception_type(errno_num, err_msg, err_filename)
+    FileNotFoundError: [Errno 2] No such file or directory: 'java'
+[W 05:39:11.101 NotebookApp] Unhandled error
+[E 05:39:11.102 NotebookApp] {
+      "Host": "code.jonghyuck.com:8888",
+      "Connection": "keep-alive",
+      "Content-Length": "111",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|91e2492b|818eef47f58a9b9d5ce0fe02b458bfee|1637902536",
+      "User-Agent": "Mozilla/5.0 (Linux; Android 11; SM-T735N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
+      "Content-Type": "application/json",
+      "Origin": "http://code.jonghyuck.com:8888",
+      "Referer": "http://code.jonghyuck.com:8888/notebooks/java_study/javagrammar/Untitled.ipynb",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "_xsrf=2|91e2492b|818eef47f58a9b9d5ce0fe02b458bfee|1637902536; username-code-jonghyuck-com-8888=\"2|1:0|10:1637902538|32:username-code-jonghyuck-com-8888|44:YWM5MzE3MWJlNDE1NDcxNGI4MTczZDA0NmQ0YmFiNjQ=|0adda582567b1cc558849db322ca484c5dc021ebf159640c73fccc9fc850b4c5\""
+    }
+[E 05:39:11.102 NotebookApp] 500 POST /api/sessions (175.196.232.2) 18.02ms referer=http://code.jonghyuck.com:8888/notebooks/java_study/javagrammar/Untitled.ipynb
+[W 05:39:27.386 NotebookApp] delete /java_study/javagrammar/Untitled.ipynb
+[I 05:39:30.493 NotebookApp] Creating new notebook in /java_study/javagrammar
+[E 05:39:31.760 NotebookApp] Failed to run command:
+    ['java', '-jar', '/home/ubuntu/.local/share/jupyter/kernels/java/ijava-1.3.0.jar', '/home/ubuntu/.local/share/jupyter/runtime/kernel-c1c14d4e-8af3-4cd6-8cfe-64d718eeb87a.json']
+        PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+        with kwargs:
+    {'stdin': -1, 'stdout': None, 'stderr': None, 'cwd': '/home/ubuntu/java_study/javagrammar', 'start_new_session': True}
+    
+[E 05:39:31.760 NotebookApp] Uncaught exception POST /api/sessions (175.196.232.2)
+    HTTPServerRequest(protocol='http', host='code.jonghyuck.com:8888', method='POST', uri='/api/sessions', version='HTTP/1.1', remote_ip='175.196.232.2')
+    Traceback (most recent call last):
+      File "/usr/lib/python3/dist-packages/tornado/web.py", line 1592, in _execute
+        result = yield result
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/handlers.py", line 69, in post
+        model = yield maybe_future(
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/sessionmanager.py", line 88, in create_session
+        kernel_id = yield self.start_kernel_for_session(session_id, path, name, type, kernel_name)
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/sessionmanager.py", line 100, in start_kernel_for_session
+        kernel_id = yield maybe_future(
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 326, in wrapper
+        yielded = next(result)
+      File "/usr/lib/python3/dist-packages/notebook/services/kernels/kernelmanager.py", line 168, in start_kernel
+        super(MappingKernelManager, self).start_kernel(**kwargs)
+      File "/usr/lib/python3/dist-packages/jupyter_client/multikernelmanager.py", line 158, in start_kernel
+        km.start_kernel(**kwargs)
+      File "/usr/lib/python3/dist-packages/jupyter_client/manager.py", line 305, in start_kernel
+        self.kernel = self._launch_kernel(kernel_cmd, **kw)
+      File "/usr/lib/python3/dist-packages/jupyter_client/manager.py", line 212, in _launch_kernel
+        return launch_kernel(kernel_cmd, **kw)
+      File "/usr/lib/python3/dist-packages/jupyter_client/launcher.py", line 135, in launch_kernel
+        proc = Popen(cmd, **kwargs)
+      File "/usr/lib/python3.8/subprocess.py", line 858, in __init__
+        self._execute_child(args, executable, preexec_fn, close_fds,
+      File "/usr/lib/python3.8/subprocess.py", line 1704, in _execute_child
+        raise child_exception_type(errno_num, err_msg, err_filename)
+    FileNotFoundError: [Errno 2] No such file or directory: 'java'
+[W 05:39:31.761 NotebookApp] Unhandled error
+[E 05:39:31.762 NotebookApp] {
+      "Host": "code.jonghyuck.com:8888",
+      "Connection": "keep-alive",
+      "Content-Length": "111",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|91e2492b|818eef47f58a9b9d5ce0fe02b458bfee|1637902536",
+      "User-Agent": "Mozilla/5.0 (Linux; Android 11; SM-T735N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
+      "Content-Type": "application/json",
+      "Origin": "http://code.jonghyuck.com:8888",
+      "Referer": "http://code.jonghyuck.com:8888/notebooks/java_study/javagrammar/Untitled.ipynb?kernel_name=java",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "_xsrf=2|91e2492b|818eef47f58a9b9d5ce0fe02b458bfee|1637902536; username-code-jonghyuck-com-8888=\"2|1:0|10:1637902538|32:username-code-jonghyuck-com-8888|44:YWM5MzE3MWJlNDE1NDcxNGI4MTczZDA0NmQ0YmFiNjQ=|0adda582567b1cc558849db322ca484c5dc021ebf159640c73fccc9fc850b4c5\""
+    }
+[E 05:39:31.762 NotebookApp] 500 POST /api/sessions (175.196.232.2) 8.49ms referer=http://code.jonghyuck.com:8888/notebooks/java_study/javagrammar/Untitled.ipynb?kernel_name=java
+[I 05:40:46.897 NotebookApp] Kernel started: 04c1722c-4944-4b4b-99d7-afbc28ae10dc
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 05:42:35.873 NotebookApp] Starting buffering for 04c1722c-4944-4b4b-99d7-afbc28ae10dc:ddfb9d07f8e7444e89407a40572b3321
+[I 05:42:36.229 NotebookApp] Kernel restarted: 04c1722c-4944-4b4b-99d7-afbc28ae10dc
+[I 05:42:37.256 NotebookApp] Restoring connection for 04c1722c-4944-4b4b-99d7-afbc28ae10dc:ddfb9d07f8e7444e89407a40572b3321
+[I 05:42:37.257 NotebookApp] Replaying 3 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 05:42:47.079 NotebookApp] Saving file at /java_study/javagrammar/Untitled.ipynb
+[I 05:44:47.030 NotebookApp] Saving file at /java_study/javagrammar/Untitled.ipynb
+[I 05:46:16.714 NotebookApp] Kernel restarted: 04c1722c-4944-4b4b-99d7-afbc28ae10dc
+[W 05:46:16.720 NotebookApp] zmq message arrived on closed channel
+[I 05:46:16.720 NotebookApp] Starting buffering for 04c1722c-4944-4b4b-99d7-afbc28ae10dc:ddfb9d07f8e7444e89407a40572b3321
+[I 05:46:17.641 NotebookApp] Restoring connection for 04c1722c-4944-4b4b-99d7-afbc28ae10dc:ddfb9d07f8e7444e89407a40572b3321
+[I 05:46:17.641 NotebookApp] Replaying 3 buffered messages
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 05:46:46.977 NotebookApp] Saving file at /java_study/javagrammar/Untitled.ipynb
+[I 05:47:28.038 NotebookApp] 302 GET / (175.196.232.2) 0.47ms
+[I 06:25:02.063 NotebookApp] Starting buffering for 04c1722c-4944-4b4b-99d7-afbc28ae10dc:ddfb9d07f8e7444e89407a40572b3321
+[I 06:25:06.004 NotebookApp] 302 GET /tree/java_study/javagrammar (175.196.232.2) 0.60ms
+[I 06:25:08.783 NotebookApp] 302 POST /login?next=%2Ftree%2Fjava_study%2Fjavagrammar (175.196.232.2) 0.93ms
+[I 06:25:11.824 NotebookApp] Kernel shutdown: 04c1722c-4944-4b4b-99d7-afbc28ae10dc
+[I 06:30:44.365 NotebookApp] Saving file at /java_study/javagrammar/grammar2.md
+[I 06:30:59.111 NotebookApp] Kernel started: 324d7772-1627-432d-905a-246fc21bf914
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 06:32:59.248 NotebookApp] Saving file at /java_study/javagrammar/Untitled.ipynb
+[I 06:36:15.470 NotebookApp] Saving file at /java_study/javagrammar/Untitled.ipynb
+[I 06:36:15.565 NotebookApp] Starting buffering for 324d7772-1627-432d-905a-246fc21bf914:5a0ed1bcef984b59846082f246739b83
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 06:36:19.770 NotebookApp] Starting buffering for 324d7772-1627-432d-905a-246fc21bf914:66374d4dbde749f2a565a1b01ab0b7ae
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 06:38:50.442 NotebookApp] Kernel shutdown: 324d7772-1627-432d-905a-246fc21bf914
+[E 06:38:50.844 NotebookApp] Failed to run command:
+    ['java', '-jar', '/home/ubuntu/.local/share/jupyter/kernels/java/ijava-1.3.0.jar', '/home/ubuntu/.local/share/jupyter/runtime/kernel-739aef1a-c2eb-4a8d-b8b3-d2cced1379c7.json']
+        PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+        with kwargs:
+    {'stdin': -1, 'stdout': None, 'stderr': None, 'cwd': '/home/ubuntu/java_study/javagrammar', 'start_new_session': True}
+    
+[E 06:38:50.844 NotebookApp] Uncaught exception POST /api/sessions (175.196.232.2)
+    HTTPServerRequest(protocol='http', host='code.jonghyuck.com:8888', method='POST', uri='/api/sessions', version='HTTP/1.1', remote_ip='175.196.232.2')
+    Traceback (most recent call last):
+      File "/usr/lib/python3/dist-packages/tornado/web.py", line 1592, in _execute
+        result = yield result
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/handlers.py", line 69, in post
+        model = yield maybe_future(
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/sessionmanager.py", line 88, in create_session
+        kernel_id = yield self.start_kernel_for_session(session_id, path, name, type, kernel_name)
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/sessionmanager.py", line 100, in start_kernel_for_session
+        kernel_id = yield maybe_future(
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 326, in wrapper
+        yielded = next(result)
+      File "/usr/lib/python3/dist-packages/notebook/services/kernels/kernelmanager.py", line 168, in start_kernel
+        super(MappingKernelManager, self).start_kernel(**kwargs)
+      File "/usr/lib/python3/dist-packages/jupyter_client/multikernelmanager.py", line 158, in start_kernel
+        km.start_kernel(**kwargs)
+      File "/usr/lib/python3/dist-packages/jupyter_client/manager.py", line 305, in start_kernel
+        self.kernel = self._launch_kernel(kernel_cmd, **kw)
+      File "/usr/lib/python3/dist-packages/jupyter_client/manager.py", line 212, in _launch_kernel
+        return launch_kernel(kernel_cmd, **kw)
+      File "/usr/lib/python3/dist-packages/jupyter_client/launcher.py", line 135, in launch_kernel
+        proc = Popen(cmd, **kwargs)
+      File "/usr/lib/python3.8/subprocess.py", line 858, in __init__
+        self._execute_child(args, executable, preexec_fn, close_fds,
+      File "/usr/lib/python3.8/subprocess.py", line 1704, in _execute_child
+        raise child_exception_type(errno_num, err_msg, err_filename)
+    FileNotFoundError: [Errno 2] No such file or directory: 'java'
+[W 06:38:50.845 NotebookApp] Unhandled error
+[E 06:38:50.846 NotebookApp] {
+      "Host": "code.jonghyuck.com:8888",
+      "Connection": "keep-alive",
+      "Content-Length": "111",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|91e2492b|818eef47f58a9b9d5ce0fe02b458bfee|1637902536",
+      "User-Agent": "Mozilla/5.0 (Linux; Android 11; SM-T735N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
+      "Content-Type": "application/json",
+      "Origin": "http://code.jonghyuck.com:8888",
+      "Referer": "http://code.jonghyuck.com:8888/notebooks/java_study/javagrammar/Untitled.ipynb",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "_xsrf=2|91e2492b|818eef47f58a9b9d5ce0fe02b458bfee|1637902536; username-code-jonghyuck-com-8888=\"2|1:0|10:1637907908|32:username-code-jonghyuck-com-8888|44:YzcxNmU3OTE0MzhmNGY2ZWI1MDMzNDMyZWU4NDU2OTg=|8ae0a09c8ba037528a0575e65796ca39994f62d561bd28ccf1c0833dcf00758e\""
+    }
+[E 06:38:50.846 NotebookApp] 500 POST /api/sessions (175.196.232.2) 11.22ms referer=http://code.jonghyuck.com:8888/notebooks/java_study/javagrammar/Untitled.ipynb
+[I 06:39:11.248 NotebookApp] New terminal with automatic name: 1
+[I 06:44:34.592 NotebookApp] Kernel started: 6e10c9f7-88eb-4072-9c22-1c21f58a972b
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.version
+[I 06:44:43.670 NotebookApp] Starting buffering for 6e10c9f7-88eb-4072-9c22-1c21f58a972b:d02be223bb574fbc86e7b4322d509245
+[I 06:44:43.672 NotebookApp] Kernel shutdown: 6e10c9f7-88eb-4072-9c22-1c21f58a972b
+[E 06:44:44.008 NotebookApp] Failed to run command:
+    ['java', '-jar', '/home/ubuntu/.local/share/jupyter/kernels/java/ijava-1.3.0.jar', '/home/ubuntu/.local/share/jupyter/runtime/kernel-fcda8736-d0a7-47e5-89a7-cd839c055ee0.json']
+        PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+        with kwargs:
+    {'stdin': -1, 'stdout': None, 'stderr': None, 'cwd': '/home/ubuntu/java_study/javagrammar', 'start_new_session': True}
+    
+[E 06:44:44.008 NotebookApp] Uncaught exception POST /api/sessions (175.196.232.2)
+    HTTPServerRequest(protocol='http', host='code.jonghyuck.com:8888', method='POST', uri='/api/sessions', version='HTTP/1.1', remote_ip='175.196.232.2')
+    Traceback (most recent call last):
+      File "/usr/lib/python3/dist-packages/tornado/web.py", line 1592, in _execute
+        result = yield result
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/handlers.py", line 69, in post
+        model = yield maybe_future(
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/sessionmanager.py", line 88, in create_session
+        kernel_id = yield self.start_kernel_for_session(session_id, path, name, type, kernel_name)
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1156, in run
+        yielded = self.gen.throw(*exc_info)
+      File "/usr/lib/python3/dist-packages/notebook/services/sessions/sessionmanager.py", line 100, in start_kernel_for_session
+        kernel_id = yield maybe_future(
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 1148, in run
+        value = future.result()
+      File "/usr/lib/python3/dist-packages/tornado/gen.py", line 326, in wrapper
+        yielded = next(result)
+      File "/usr/lib/python3/dist-packages/notebook/services/kernels/kernelmanager.py", line 168, in start_kernel
+        super(MappingKernelManager, self).start_kernel(**kwargs)
+      File "/usr/lib/python3/dist-packages/jupyter_client/multikernelmanager.py", line 158, in start_kernel
+        km.start_kernel(**kwargs)
+      File "/usr/lib/python3/dist-packages/jupyter_client/manager.py", line 305, in start_kernel
+        self.kernel = self._launch_kernel(kernel_cmd, **kw)
+      File "/usr/lib/python3/dist-packages/jupyter_client/manager.py", line 212, in _launch_kernel
+        return launch_kernel(kernel_cmd, **kw)
+      File "/usr/lib/python3/dist-packages/jupyter_client/launcher.py", line 135, in launch_kernel
+        proc = Popen(cmd, **kwargs)
+      File "/usr/lib/python3.8/subprocess.py", line 858, in __init__
+        self._execute_child(args, executable, preexec_fn, close_fds,
+      File "/usr/lib/python3.8/subprocess.py", line 1704, in _execute_child
+        raise child_exception_type(errno_num, err_msg, err_filename)
+    FileNotFoundError: [Errno 2] No such file or directory: 'java'
+[W 06:44:44.009 NotebookApp] Unhandled error
+[E 06:44:44.010 NotebookApp] {
+      "Host": "code.jonghyuck.com:8888",
+      "Connection": "keep-alive",
+      "Content-Length": "111",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|91e2492b|818eef47f58a9b9d5ce0fe02b458bfee|1637902536",
+      "User-Agent": "Mozilla/5.0 (Linux; Android 11; SM-T735N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36",
+      "Content-Type": "application/json",
+      "Origin": "http://code.jonghyuck.com:8888",
+      "Referer": "http://code.jonghyuck.com:8888/notebooks/java_study/javagrammar/Untitled.ipynb",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "_xsrf=2|91e2492b|818eef47f58a9b9d5ce0fe02b458bfee|1637902536; username-code-jonghyuck-com-8888=\"2|1:0|10:1637907908|32:username-code-jonghyuck-com-8888|44:YzcxNmU3OTE0MzhmNGY2ZWI1MDMzNDMyZWU4NDU2OTg=|8ae0a09c8ba037528a0575e65796ca39994f62d561bd28ccf1c0833dcf00758e\""
+    }
+[E 06:44:44.010 NotebookApp] 500 POST /api/sessions (175.196.232.2) 8.82ms referer=http://code.jonghyuck.com:8888/notebooks/java_study/javagrammar/Untitled.ipynb
+[I 06:46:35.134 NotebookApp] Saving file at /java_study/javagrammar/Untitled.ipynb
+[I 06:52:50.019 NotebookApp] EOF on FD 25; stopping reading
+[I 06:52:50.119 NotebookApp] Terminal 1 closed
+[W 06:53:03.460 NotebookApp] delete /java_study/javagrammar/Untitled.ipynb
+[I 07:05:38.327 NotebookApp] Saving file at /java_study/javagrammar/grammar2.md
+[I 07:15:37.343 NotebookApp] Creating new file in /java_study/javagrammar
+[I 07:15:42.450 NotebookApp] Saving file at /java_study/javagrammar/grammar2.md
+[I 08:24:57.482 NotebookApp] Saving file at /java_study/javagrammar/객체지향 개념과 자바.md
+[I 08:26:00.542 NotebookApp] Saving file at /java_study/javagrammar/객체지향 개념과 자바.md
+[I 08:26:01.327 NotebookApp] Saving file at /java_study/javagrammar/객체지향 개념과 자바.md
+[I 08:26:02.284 NotebookApp] Saving file at /java_study/javagrammar/객체지향 개념과 자바.md
+[I 08:27:10.363 NotebookApp] Saving file at /java_study/javagrammar/객체지향 개념과 자바.md
+[I 08:27:18.318 NotebookApp] New terminal with automatic name: 1
