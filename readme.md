@@ -1,4 +1,4 @@
-출처url : https://dinfree.com/lecture/language/112_java_1.html#m1
+url : https://dinfree.com/lecture/language/112_java_1.html#m1
 - 개인 공부용으로 제작한 정리용 레포입니다.
 # 자바란?
 - 현재 가장 대표적인 프로그래밍 언어
