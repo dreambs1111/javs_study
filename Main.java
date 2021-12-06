@@ -6,9 +6,8 @@ public class Main {
 		while(true)
 		{
 			Scanner sc = new Scanner(System.in);	
-			int A = sc.nextInt();
 			
-			ㅇㅇ
+			System.out.println("he");
 		}
 	}
 }
